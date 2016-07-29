@@ -385,7 +385,12 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -fdiagnostics-show-option -Werror
+  		   -fdiagnostics-show-option -Werror \
+ 		   -Wno-memset-transposed-args -Wno-discarded-array-qualifiers \
+ 		   -Wno-logical-not-parentheses -Wno-array-bounds -Wno-switch \
+		   -Wno-switch-bool -Wno-unused-variable -Wno-tautological-compare \
+ 		   -mtune=cortex-a57.cortex-a53 \
+		   -std=gnu89
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
